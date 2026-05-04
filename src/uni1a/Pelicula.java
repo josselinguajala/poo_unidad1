@@ -6,8 +6,9 @@ package uni1a;
 // Subclase Pelicula que extiende de ContenidoAudiovisual
 public class Pelicula extends ContenidoAudiovisual {
     private String estudio;
+    private String actor;
 
-    public Pelicula(String titulo, int duracionEnMinutos, String genero, String estudio) {
+    public Pelicula(String titulo, String actor, int duracionEnMinutos, String genero, String estudio) {
         super(titulo, duracionEnMinutos, genero);
         this.estudio = estudio;
     }
@@ -30,4 +31,19 @@ public class Pelicula extends ContenidoAudiovisual {
         System.out.println("Estudio: " + estudio);
         System.out.println();
     }
+    
+    public void agregarActor(Actor actor1, String actor) {
+    	this.setActor(actor);
+		
+	}
+
+	public String getActor() {
+		return actor;
+	}
+
+	public void setActor(String actor) {
+		this.actor = actor;
+	}
+
+
 }
